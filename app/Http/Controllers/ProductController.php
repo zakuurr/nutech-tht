@@ -66,7 +66,7 @@ class ProductController extends Controller
             Alert::success('Berhasil!', 'Produk Berhasil Ditambahkan');
             return redirect()->route('product.index');
         } catch (Exception $e) {
-            Alert::error('Gagal!', 'Produk Gagal Ditambahkan');
+            Alert::error('Gagal!', 'Produk Gagal Ditambahkan'. $e->getMessage());
             return redirect()->back();
         }
     }
