@@ -80,9 +80,11 @@
               <label for="file-ip-1" id="labelPreview" class="mx-auto">
                 <p class="fw-semibold">upload gambar disini</p>
               </label>
-              <input type="file" name="gambar" id="file-ip-1" accept=".jpg, .png" onchange="previewImg(event);">
+              <input type="file" name="gambar" id="file-ip-1" value="{{ isset($product->gambar) ? $product->gambar : '' }}" accept=".jpg, .png" onchange="previewImg(event);">
             </div>
-
+            @if ($errors->has('gambar'))
+            <span class="text-danger">&diams;&ensp;{{ $errors->first('gambar') }}</span>
+          @endif
           </div>
           <div class="d-flex justify-content-end gap-3">
             <button type="reset" class="btn btn-outline-primary px-5">Batalkan</button>
