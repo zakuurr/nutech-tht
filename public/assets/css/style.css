@@ -1,0 +1,97 @@
+.judul {
+    top: 206px;
+    left: 239px;
+    width: 304px;
+    height: 62px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0);
+}
+
+.gambar {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+        saturate(600%) contrast(0.8);
+}
+.text {
+    left: 40px;
+    overflow: hidden;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    color: #000000;
+}
+
+.text2 {
+    position: absolute;
+    top: 305px;
+    left: 190px;
+    width: 354.2px;
+    height: 87.2px;
+    overflow: hidden;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+
+.icon-black {
+    filter: invert(1);
+}
+.form-input {
+    position: absolute;
+    top: 405px;
+    left: 120px;
+}
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+.input {
+    padding-left: 40px;
+}
+.icon-lock {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+.icon-visible {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.text-breadcumb
+{
+    text-decoration: none;
+    color: lightgray
+}
+.active{
+    background-color: #ffffff60;
+    font-weight: 500;
+  }
+  .form-upload-image {
+    width:100%;
+    padding:20px;
+  }
+  .form-upload-image img {
+    height: auto;
+  }
+  .form-upload-image input {
+    display:none;
+  }
+  .form-upload-image label {
+    display:block;
+    width:45%;
+    height:45px;
+    line-height:50px;
+    text-align:center;
+    color:#1172c2;
+    font-size:15px;
+    border-radius:5px;
+    cursor:pointer;
+  }
