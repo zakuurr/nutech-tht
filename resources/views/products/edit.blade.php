@@ -75,7 +75,7 @@
             <label for="exampleFormControlInput1" class="form-label fw-semibold">Upload Image</label>
             <div id="container" class="form-upload-image d-flex justify-content-center flex-column rounded">
               <div class="mx-auto">
-                <img src="{{ isset($product->gambar) ? '/assets/product/'.$product->gambar : '/assets/img/Image.png' }}" id="preview" class="uploadImagePreview">
+                <img src="{{ isset($product->gambar) ? '/storage/product/'.$product->gambar : '/assets/img/Image.png' }}" id="preview" class="uploadImagePreview">
               </div>
               <label for="file-ip-1" id="labelPreview" class="mx-auto">
                 <p class="fw-semibold">upload gambar disini</p>

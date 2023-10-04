@@ -11,6 +11,7 @@ use Alert;
 use Illuminate\Support\Facades\File;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ProductsExport;
+use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
 
@@ -50,7 +51,7 @@ class ProductController extends Controller
             if ($request->hasFile('gambar')) {
                 $image_type = $request->gambar->getClientOriginalExtension();
                 $image_name = $request->nama_produk . '.' . $image_type;
-                $request->gambar->move(public_path('assets/product'), $image_name);
+                $request->gambar->storeAs('public/product',$image_name);
             }
 
 
@@ -97,14 +98,14 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         if($request->hasFile('gambar')){
-            $current_image_path = public_path('assets/product/');
+            $current_image_path = public_path('storage/product/');
             $current_image_name = $product->gambar;
             if(File::exists($current_image_path.$current_image_name)){
                 File::delete($current_image_path.$current_image_name);
             }
             $image_type = $request->gambar->getClientOriginalExtension();
             $image_name = $request->nama_produk.'.'.$image_type;
-            $request->gambar->move(public_path('assets/product'), $image_name);
+            $request->gambar->storeAs('public/product',$image_name);
         }
 
         Product::where('id', $id)->update([

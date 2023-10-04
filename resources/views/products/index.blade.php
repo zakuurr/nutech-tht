@@ -67,7 +67,7 @@
                     @forelse ($products as $key => $product)
                     <tr>
                       <td>{{ $products->firstItem() + $key }}</td>
-                      <td class="text-center"><img src="{{ asset('') }}assets/product/{{ $product->gambar }}" alt="Image" height="20px"></td>
+                      <td class="text-center"><img src="{{ asset('') }}storage/product/{{ $product->gambar }}" alt="Image" height="20px"></td>
 
                       <td>{{ $product->nama_produk }}</td>
                       <td>{{ $product->category->nama }}</td>
